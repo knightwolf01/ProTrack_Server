@@ -18,7 +18,7 @@ app.use('/api/tasks', taskRoutes);
 // Health check
 app.get('/', (req, res) => res.send('API running'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT ;
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');

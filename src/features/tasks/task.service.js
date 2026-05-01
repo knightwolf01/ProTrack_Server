@@ -114,7 +114,7 @@ exports.update = async (taskId, updates, userId) => {
     }
   }
 
-  await task.save();
+  await task.save({ validateModifiedOnly: true });
   return populateTaskRelations(Task.findById(task._id));
 };
 
